@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -42,15 +41,13 @@ public class StudentController {
     }
 
     @RequestMapping("edit/{id}")
-    public ModelAndView showEditStudentPage(@PathVariable (name = "id") Long id) {
-        ModelAndView mav = new ModelAndView("edit_student");
-        Student student = studentService.findById(id);
-        mav.addObject("student", student);
-        return mav;
+    public String showEditStudentPage(@PathVariable(name = "id") Long id, Model model) {
+        model.addAttribute("student", studentService.findById(id));
+        return "edit_student";
     }
 
     @RequestMapping("delete/{id}")
-    public String deleteStudentPage(@PathVariable (name = "id") Long id) {
+    public String deleteStudentPage(@PathVariable(name = "id") Long id) {
         studentService.deleteById(id);
         return "redirect:/";
     }

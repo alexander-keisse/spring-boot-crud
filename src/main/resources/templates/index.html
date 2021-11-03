@@ -26,8 +26,7 @@
 					<td th:text="${student.name}">Student Name</td>
 					<td th:text="${student.city}">Student City</td>
 					<td>					
-						<a th:href="@{'/edit/' + ${student.id}}">Edit</a>
-						&nbsp;&nbsp;&nbsp;
+						<a th:href="@{'/edit/' + ${student.id}}">Edit</a>&nbsp;&nbsp;&nbsp;
 						<a th:href="@{'/delete/' + ${student.id}}">Delete</a>
 					</td>
 				</tr>
