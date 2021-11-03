@@ -22,14 +22,19 @@ public class StudentBootstrap implements ApplicationListener<ContextRefreshedEve
         Student alex = new Student();
         alex.setName("Alexander");
         alex.setCity("Eeklo");
+        alex.setGender("Male");
+        alex.setGreatStudent(false);
 
         studentService.save(alex);
 
-        Student pearl = new Student();
-        pearl.setName("Pearl");
-        pearl.setCity("Brussel");
+        Student sarah = new Student();
+        sarah.setName("Sarah");
+        sarah.setCity("Watervliet");
+        sarah.setGender("Female");
+        sarah.setGreatStudent(true);
 
-        studentService.save(pearl);
+
+        studentService.save(sarah);
 
     }
 }

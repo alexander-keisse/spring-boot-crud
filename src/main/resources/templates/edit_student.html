@@ -8,13 +8,11 @@
 <div align="center">
     <h1>Edit Student</h1>
     <br />
-    <form action="#" th:action="@{/save}" th:object="${student}"
-          method="post">
+    <form action="#" th:action="@{/save}" th:object="${student}" method="post">
         <table border="0">
             <tr>
                 <td>Student ID:</td>
-                <td><input type="text" th:field="*{id}" readonly="readonly" />
-                </td>
+                <td><input type="text" th:field="*{id}" readonly="readonly" /></td>
             </tr>
             <tr>
                 <td>Student Name:</td>
@@ -23,6 +21,16 @@
             <tr>
                 <td>Student City:</td>
                 <td><input type="text" th:field="*{city}" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" th:field="*{gender}" value="Male" />Male</td>
+                <td><input type="radio" th:field="*{gender}" value="Female" />Female</td>
+            </tr>
+            <tr>
+                <td>Great Student:</td>
+                <td><input type="radio" th:field="*{greatStudent}" value="true" />true</td>
+                <td><input type="radio" th:field="*{greatStudent}" value="false" />false</td>
             </tr>
             <tr>
                 <td colspan="2"><button type="submit">Save</button></td>

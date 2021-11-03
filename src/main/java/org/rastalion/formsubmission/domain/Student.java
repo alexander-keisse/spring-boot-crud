@@ -14,6 +14,9 @@ public class Student {
 
     private String name;
     private String city;
+    private String gender;
+
+    private Boolean greatStudent;
 
     public Long getId() {
         return id;
@@ -37,5 +40,21 @@ public class Student {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Boolean getGreatStudent() {
+        return greatStudent;
+    }
+
+    public void setGreatStudent(Boolean greatStudent) {
+        this.greatStudent = greatStudent;
     }
 }
